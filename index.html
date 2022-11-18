@@ -51,7 +51,7 @@
         <section class="hero section">
             <div class="container">
                 <h1 class="hero-title">Ефективні рішення для<br> вашого бізнесу</h1>
-                <button class="hero-button" type="button">Замовити послугу</button>
+                <button class="hero-button" type="button" data-open-modal>Замовити послугу</button>
             </div>
         </section>
 
@@ -107,9 +107,9 @@
             </div>
         </section>
 
-        <div class="backdrop is-hidden">
+        <div class="backdrop is-hidden" data-backdrop>
             <div class="modal-hero">
-                <button class="button-modal" type="button">
+                <button class="button-modal" type="button" data-close-modal>
                     <svg width="30px" height="30px">
                         <use href="./images/icons.svg#close"></use>
                     </svg>
@@ -129,7 +129,13 @@
 
             refs.backdrop.addEventListener("click", logBackdropClick);
 
-            function toggleModal
+            function toggleModal() {
+                refs.backdrop.classList.toggle("is-hidden");
+            }
+
+            function logBackdropClick() {
+                console.log("Це клік в бекдроп");
+            }
         </script>
 
         <section class="section-works section">
