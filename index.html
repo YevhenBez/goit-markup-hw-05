@@ -51,7 +51,7 @@
         <section class="hero section">
             <div class="container">
                 <h1 class="hero-title">Ефективні рішення для<br> вашого бізнесу</h1>
-                <button class="hero-button" type="button" data-open-modal>Замовити послугу</button>
+                <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
 
@@ -106,37 +106,6 @@
                 </ul>
             </div>
         </section>
-
-        <div class="backdrop is-hidden" data-backdrop>
-            <div class="modal-hero">
-                <button class="button-modal" type="button" data-close-modal>
-                    <svg width="30px" height="30px">
-                        <use href="./images/icons.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <script>
-            const refs = {
-                openModalBtn: document.querySelector("[data-open-modal]"),
-                closeModalBtn: document.querySelector("[data-close-modal]"),
-                backdrop: document.querySelector("[data-backdrop]"),
-            };
-
-            refs.openModalBtn.addEventListener("click", toggleModal);
-            refs.closeModalBtn.addEventListener("click", toggleModal);
-
-            refs.backdrop.addEventListener("click", logBackdropClick);
-
-            function toggleModal() {
-                refs.backdrop.classList.toggle("is-hidden");
-            }
-
-            function logBackdropClick() {
-                console.log("Це клік в бекдроп");
-            }
-        </script>
 
         <section class="section-works section">
             <div class="container">
@@ -433,6 +402,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal-hero">
+            <button class="button-modal" type="button" data-modal-close>
+                <svg width="30px" height="30px">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 
 </body>
 
