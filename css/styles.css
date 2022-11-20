@@ -546,6 +546,38 @@ ul {
     outline: none;
 }
 
+.img-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-link:hover .filter-card-text,
+.filter-link:focus .filter-card-text {
+    transform: translateY(0);
+}
+
+.filter-card-text {
+    position: absolute;
+    top: 0;
+
+    padding: 63px 24px;
+    width: 370px;
+    height: 100%;
+
+    transform: translateY(100%);
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--button-accent-color);
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .filter-title {
     margin-bottom: 4px;
     color: var(--title-text-color);
