@@ -137,7 +137,7 @@ ul {
 
 .link-current::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     content: "";
 
     display: block;
@@ -442,7 +442,7 @@ ul {
     display: block;
     border: 1px solid var(--icon-staff);
     text-align: center;
-    padding: 23px 32px;
+    padding: 16px 32px;
     border-radius: 4px;
 
     transition-property: border;
@@ -459,6 +459,7 @@ ul {
 
 .clients-icon {
     fill: var(--icon-staff);
+
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
